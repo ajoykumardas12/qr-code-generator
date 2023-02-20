@@ -6,6 +6,7 @@
     border-radius: 0.2rem;
     padding: 0.2rem 0.4rem;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .save-button:hover{

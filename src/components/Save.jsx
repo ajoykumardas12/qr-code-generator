@@ -1,10 +1,10 @@
 import React from "react";
 import "./Save.css";
 
-function Save() {
+function Save(props) {
     return (
         <div className="save">
-            <button className="save-button">Save</button>
+            <a href={props.imgUrl} download="qr-code.png" className="save-button">Save</a>
         </div>
     );
 }
