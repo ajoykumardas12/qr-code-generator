@@ -1,0 +1,9 @@
+.qr-code-area{
+    margin: 2rem 2rem 1rem;
+}
+
+.qr-code{
+    display: block;
+    width: 16rem;
+    max-width: 100%;
+}

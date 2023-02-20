@@ -1,0 +1,48 @@
+.input-area form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-area label{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#input-for-qr{
+    width: 150%;
+    height: 1.5rem;
+    font-size: 1rem;
+    margin: 0.3rem 0 1rem;
+    border: 0.15rem solid #BDCDD6;
+    border-radius: 0.2rem;
+}
+#input-for-qr:focus{
+    background-color: #BDCDD6;
+    border: 0.15rem solid #404c53;
+    outline: none;
+}
+
+.generate-button{
+    padding: 0.3rem;
+    background: #6096B4;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+.generate-button:hover{
+    background: #93BFCF;
+}
+
+@media screen and (max-width: 320px){
+    #input-for-qr{
+        width: 135%;
+    }
+}
+@media screen and (max-width: 300px){
+    #input-for-qr{
+        width: 125%;
+    }
+}

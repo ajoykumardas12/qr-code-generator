@@ -1,0 +1,13 @@
+.save-button{
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    background: #BDCDD6;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+}
+
+.save-button:hover{
+    background: #93BFCF;
+}
