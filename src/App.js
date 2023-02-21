@@ -24,13 +24,17 @@ function App() {
   function handleGenerate(event){
     event.preventDefault();
     
+    
+    
     if(input){
       QRCode.toDataURL(input, {
-        margin: 2,
-        scale: 7,
+        // version: 2,
+        // maskPattern: 5,
+        // margin: 2,
+        // scale: 10,
         width: 400,
         color:{
-          dark: '#6096B4',
+          dark: '#1d485f',
         }
       })
       .then(url => {

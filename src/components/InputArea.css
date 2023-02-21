@@ -10,8 +10,10 @@
 }
 
 #input-for-qr{
+    box-sizing: border-box;
     width: 150%;
-    height: 1.5rem;
+    height: 1.9rem;
+    padding: 0.2rem;
     font-size: 1rem;
     margin: 0.3rem 0 1rem;
     border: 0.15rem solid #BDCDD6;
@@ -25,7 +27,7 @@
 
 .generate-button{
     padding: 0.3rem;
-    background: #6096B4;
+    background: #BDCDD6;
     font-family: 'Outfit', sans-serif;
     font-size: 1rem;
     border: none;
