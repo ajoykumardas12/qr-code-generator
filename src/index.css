@@ -3,11 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-html,
-body{
-  min-height: 100%;
-  min-width: 100%;
-}
 body {
   font-family: 'Outfit', sans-serif;
   font-size: 1rem;

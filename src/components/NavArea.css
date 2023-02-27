@@ -22,8 +22,7 @@ nav{
     background: #cacaca;
 }
 
-.contact .tooltip-text,
-.wifi .tooltip-text{
+.tooltip-text{
     visibility: hidden;
     width: 120px;
     background-color: #cacaca;
@@ -36,7 +35,29 @@ nav{
     position: absolute;
     z-index: 1;
 }
+.phone:hover .tooltip-text,
 .contact:hover .tooltip-text,
 .wifi:hover .tooltip-text{
     visibility: visible;
+}
+
+@media screen and (max-width: 450px){
+    nav{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border-right: none;
+        border-bottom: 1.5px solid #6b6b6b;
+    }
+    .nav-item{
+        margin: 0;
+    }
+    .nav-item-name{
+        display: none;
+    }
+    .tooltip-text{
+        left: -120px;
+    }
 }
