@@ -13,8 +13,8 @@ function App() {
   const [input, setInput] = useState("");
   const [qRCodeUrl, setQRCodeUrl] = useState(sampleQR);
 
-  function handleInput(event){
-    setInput(event.target.value);
+  function handleInput(value){
+    setInput(value);
   }
 
   function changeQRUrl(newUrl){

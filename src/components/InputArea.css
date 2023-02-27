@@ -12,7 +12,7 @@
     font-weight: 600;
 }
 
-#input-for-qr{
+.input{
     box-sizing: border-box;
     height: 1.9rem;
     padding: 0.2rem;
@@ -21,8 +21,19 @@
     border: 0.15rem solid #BDCDD6;
     border-radius: 0.2rem;
 }
-#input-for-qr:focus{
+.input:focus{
     background-color: #BDCDD6;
     border: 0.15rem solid #404c53;
     outline: none;
+}
+
+.submit-button{
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    width: 5rem;
+    height: 2rem;
+    background: #93BFCF;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
 }
