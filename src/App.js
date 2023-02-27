@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import InputArea from "./components/InputArea";
 import QRCodeArea from "./components/QRCodeArea";
-import Save from "./components/Save";
+import Header from "./components/Header";
+import NavArea from "./components/NavArea";
 
-// import generateQR from "./generateQR";
 import QRCode from "qrcode";
 import sampleQR from "./images/sample-qr.png";
 
@@ -24,17 +24,13 @@ function App() {
   function handleGenerate(event){
     event.preventDefault();
     
-    
-    
     if(input){
       QRCode.toDataURL(input, {
-        // version: 2,
-        // maskPattern: 5,
-        // margin: 2,
-        // scale: 10,
+        margin: 2,
+        scale: 7,
         width: 400,
         color:{
-          dark: '#1d485f',
+          dark: '#6096B4',
         }
       })
       .then(url => {
@@ -44,20 +40,24 @@ function App() {
         console.error(err)
       })
     }
+    // setInput("");
   }
 
   return (
-    <main>
-      <div className="app">
-      <InputArea 
-        inputValue={input}
-        onInputChange={handleInput}
-        onGenerate={handleGenerate}
-      />
-      <QRCodeArea imgUrl={qRCodeUrl}/>
-      <Save imgUrl={qRCodeUrl} />
+    <div className="app">
+      <Header></Header>
+      <main className="main">
+        <NavArea />
+        <InputArea 
+          inputValue={input}
+          onInputChange={handleInput}
+          onGenerate={handleGenerate}
+        />
+        <QRCodeArea 
+          imgUrl={qRCodeUrl}
+        />
+      </main>
     </div>
-    </main>
   );
 }
 

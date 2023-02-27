@@ -1,0 +1,21 @@
+nav{
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+
+    border-right: 1.5px solid #6b6b6b;
+}
+.nav-item{
+    margin: 1rem 2rem;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+.nav-item:hover{
+    background: #cacaca;
+}
