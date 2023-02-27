@@ -21,6 +21,11 @@ function NavArea() {
                 <ion-icon name="send-outline"></ion-icon>
                 <p className="nav-item-name">SMS</p>
             </Link>
+            <div className="nav-item phone">
+                <ion-icon name="call-outline"></ion-icon>
+                <p className="nav-item-name">Phone</p>
+                <p className="tooltip-text">coming soon!</p>
+            </div>
             <div className="nav-item contact">
                 <ion-icon name="person-circle-outline"></ion-icon>
                 <p className="nav-item-name">Contact</p>

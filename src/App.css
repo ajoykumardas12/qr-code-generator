@@ -1,12 +1,13 @@
-.app{
-    min-height: 100%;
-    min-width: 100%;
-}
-
 main{
-    min-height: 100%;
-    min-width: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
     border-bottom: 1.5px solid #6b6b6b;
+}
+
+@media screen and (max-width: 450px){
+    main{
+        display: flex;
+        flex-direction: column;
+        border-bottom: none;
+    }
 }
