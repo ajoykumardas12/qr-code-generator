@@ -1,9 +1,32 @@
 .qr-code-area{
-    margin: 2rem 2rem 1rem;
+    margin-left: auto;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #c2c2c2;
 }
 
 .qr-code{
     display: block;
-    width: 20rem;
-    max-width: 100%;
+    width: 15rem;
+    border-radius: 0.5rem;
+    margin: 0 4rem;
+}
+
+.save-button{
+    width: 3rem;
+    margin: 1rem;
+    color: black;
+    background: #93BFCF;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.save-button:hover{
+    background: #BDCDD6;
 }
