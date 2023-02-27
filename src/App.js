@@ -22,24 +22,20 @@ function App() {
   }
 
   function handleGenerate(event){
-    event.preventDefault();
-    
-    if(input){
-      QRCode.toDataURL(input, {
-        margin: 2,
-        scale: 7,
-        width: 400,
-        color:{
-          dark: '#6096B4',
-        }
-      })
-      .then(url => {
-        changeQRUrl(url)
-      })
-      .catch(err => {
-        console.error(err)
-      })
-    }
+    QRCode.toDataURL(input, {
+      margin: 2,
+      scale: 7,
+      width: 400,
+      color:{
+        dark: '#6096B4',
+      }
+    })
+    .then(url => {
+      changeQRUrl(url)
+    })
+    .catch(err => {
+      console.error(err)
+    })
     // setInput("");
   }
 

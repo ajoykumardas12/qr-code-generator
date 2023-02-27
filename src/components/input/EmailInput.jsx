@@ -33,8 +33,17 @@ function EmailInput(props) {
         }
     }
 
+    //if any input then generate new qr
+    function handleEmailInputSumbit(event){
+        event.preventDefault();
+        if(emailInput.to || emailInput.subject || emailInput.body){
+            props.onGenerate(event);
+        };
+    }
+    
+
     return (
-        <form action=""  onSubmit={props.onGenerate}>
+        <form action=""  onSubmit={handleEmailInputSumbit}>
             <label htmlFor="input-for-mailto" className="label">Email To </label>
             <input type="text" name="input-for-mailto" className="input" id="input-for-mailto" value={emailInput.to} onChange={handleEmailInputChange} autoComplete="off" />
             <label htmlFor="input-for-subject" className="label"> Subject </label>
