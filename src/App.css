@@ -11,3 +11,7 @@ main{
         border-bottom: none;
     }
 }
+
+ion-icon{
+    pointer-events: none;
+}

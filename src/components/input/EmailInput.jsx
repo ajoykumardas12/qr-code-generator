@@ -37,7 +37,7 @@ function EmailInput(props) {
     function handleEmailInputSumbit(event){
         event.preventDefault();
         if(emailInput.to || emailInput.subject || emailInput.body){
-            props.onGenerate(event);
+            props.onGenerate();
         };
     }
     

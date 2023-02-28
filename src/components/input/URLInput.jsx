@@ -15,7 +15,7 @@ function URLInput(props) {
     function handleURLInputSumbit(event){
         event.preventDefault();
         if(urlInput){
-            props.onGenerate(event);
+            props.onGenerate();
         };
     }
 

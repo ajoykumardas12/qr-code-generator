@@ -15,7 +15,7 @@ function TextInput(props) {
     function handleTextInputSumbit(event){
         event.preventDefault();
         if(textInput){
-            props.onGenerate(event);
+            props.onGenerate();
         };
     }
 

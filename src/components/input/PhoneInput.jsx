@@ -15,7 +15,7 @@ function PhoneInput(props) {
     function handlePhoneInputSumbit(event){
         event.preventDefault();
         if(phoneInput){
-            props.onGenerate(event);
+            props.onGenerate();
         };
     }
 

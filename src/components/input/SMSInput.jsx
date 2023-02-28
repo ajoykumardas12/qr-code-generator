@@ -30,7 +30,7 @@ function SMSInput(props) {
     function handleSMSInputSumbit(event){
         event.preventDefault();
         if(smsInput.to || smsInput.body){
-            props.onGenerate(event);
+            props.onGenerate();
         };
     }
 

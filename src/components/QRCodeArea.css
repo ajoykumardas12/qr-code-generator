@@ -6,17 +6,14 @@
     justify-content: center;
     background: #c2c2c2;
 }
-
 .qr-code{
     display: block;
     width: 15rem;
     border-radius: 0.5rem;
-    margin: 0 4rem;
+    margin: 2rem 4rem 0.5rem;
 }
-
-.save-button{
-    width: 3rem;
-    margin: 1rem;
+.button{
+    margin: 0.5rem 1rem 1.5rem;
     color: black;
     background: #93BFCF;
     border: none;
@@ -25,9 +22,86 @@
     cursor: pointer;
     text-decoration: none;
 }
-
-.save-button:hover{
+.button:hover{
     background: #BDCDD6;
+}
+
+
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+.options label{
+    margin-right: 0.5rem;
+}
+.image-width{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+.width-value-control{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 1.2rem;
+}
+.width-value{
+    padding: 0 0.2rem;
+}
+.width-value-increment,
+.width-value-decrement{
+    display: flex;
+    align-items: center;
+    background: #DDDDDD;
+    border: 1px solid #aaaaaa;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.image-color{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.colors{
+    margin-top: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.image-color-background,
+.image-color-pixels{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.color-box{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+.color-box input{
+    max-width: 100%;
+    max-height: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.color-box input::-webkit-color-swatch {
+    border: none;
+}
+.color-box input::-moz-color-swatch {
+    border: none;
 }
 
 @media screen and (max-width: 450px){
@@ -36,7 +110,7 @@
         margin-left: 0;
     }
     .qr-code{
-        max-width: 10rem;
+        max-width: 12rem;
         margin: 2rem 0 1rem;
     }
 }
