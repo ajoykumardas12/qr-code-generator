@@ -26,8 +26,16 @@ function SMSInput(props) {
         }
     }
 
+    //if any input then generate new qr
+    function handleSMSInputSumbit(event){
+        event.preventDefault();
+        if(smsInput.to || smsInput.body){
+            props.onGenerate();
+        };
+    }
+
     return (
-        <form action=""  onSubmit={props.onGenerate}>
+        <form action=""  onSubmit={handleSMSInputSumbit}>
             <label htmlFor="input-for-mailto" className="label">SMS To </label>
             <input type="text" name="input-for-mailto" className="input" id="input-for-mailto" value={smsInput.to} onChange={handleSMSInputChange} autoComplete="off" />
             <label htmlFor="input-for-body" className="label"> Body </label>

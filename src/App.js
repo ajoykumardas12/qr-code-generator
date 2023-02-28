@@ -12,6 +12,14 @@ import "./App.css";
 function App() {
   const [input, setInput] = useState("");
   const [qRCodeUrl, setQRCodeUrl] = useState(sampleQR);
+  const [options, setOptions] = useState({
+    width: 600,
+    margin: 3,
+    color:{
+      dark: '#6096B4',
+      light: '#ffffff'
+    }
+  });
 
   function handleInput(value){
     setInput(value);
@@ -21,25 +29,18 @@ function App() {
     setQRCodeUrl(newUrl);
   }
 
-  function handleGenerate(event){
-    event.preventDefault();
-    
-    if(input){
-      QRCode.toDataURL(input, {
-        margin: 2,
-        scale: 7,
-        width: 400,
-        color:{
-          dark: '#6096B4',
-        }
-      })
-      .then(url => {
-        changeQRUrl(url)
-      })
-      .catch(err => {
-        console.error(err)
-      })
-    }
+  function handleOptionsChange(newOptions){
+    setOptions(newOptions);
+  }
+
+  function handleGenerate(){
+    QRCode.toDataURL(input, options)
+    .then(url => {
+      changeQRUrl(url)
+    })
+    .catch(err => {
+      console.error(err)
+    })
     // setInput("");
   }
 
@@ -55,6 +56,8 @@ function App() {
         />
         <QRCodeArea 
           imgUrl={qRCodeUrl}
+          optionsChange={handleOptionsChange}
+          onGenerate={handleGenerate}
         />
       </main>
     </div>
