@@ -16,7 +16,7 @@ function App() {
     width: 600,
     margin: 3,
     color:{
-      dark: '#6096B4',
+      dark: '#000000',
       light: '#ffffff'
     }
   });

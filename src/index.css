@@ -3,9 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root{
+  --border-color: #6b6b6b;
+  --text-color: #0c0c0c;
+  --gray: #c2c2c2;
+  --light-gray: #cacaca;
+  --lighter-gray: #e6e4e4;
+  --whitish-gray: #DDDDDD;
+  --bluish-light-gray: #BDCDD6;
+  --bluish-dark-gray: #404c53;
+  --sky-blue: #93BFCF;
+  --steel-blue: #BDCDD6;
+}
 body {
   font-family: 'Outfit', sans-serif;
   font-size: 1rem;
 
+  color: var(--text-color);
   background: #fff;
 }

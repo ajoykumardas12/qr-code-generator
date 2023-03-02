@@ -8,7 +8,7 @@ function QRCodeArea(props) {
         width: 600,
         margin: 4,
         color: {
-            dark: '#93BFCF',
+            dark: '#000000',
             light: '#ffffff'
         }
     });

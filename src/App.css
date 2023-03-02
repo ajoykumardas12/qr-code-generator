@@ -1,7 +1,7 @@
 main{
     display: grid;
     grid-template-columns: auto auto auto;
-    border-bottom: 1.5px solid #6b6b6b;
+    border-bottom: 1.5px solid var(--border-color);
 }
 
 @media screen and (max-width: 450px){

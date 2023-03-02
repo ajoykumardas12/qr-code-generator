@@ -5,7 +5,7 @@ nav{
     font-size: 1.5rem;
     padding-top: 2rem;
 
-    border-right: 1.5px solid #6b6b6b;
+    border-right: 1.5px solid var(--border-color);
 }
 .nav-item{
     margin: 1rem 2rem;
@@ -16,19 +16,19 @@ nav{
     border-radius: 0.4rem;
     cursor: pointer;
     text-decoration: none;
-    color: #000;
+    color: var(--text-color);
 }
 nav .active{
-    background: #e9e8e8;
+    background: var(--lighter-gray);
 }
 .nav-item:hover{
-    background: #cacaca;
+    background: var(--light-gray);
 }
 
 .tooltip-text{
     visibility: hidden;
     width: 120px;
-    background-color: #cacaca;
+    background-color: var(--light-gray);
     text-align: center;
     font-size: 1rem;
     border-radius: 6px;
@@ -52,7 +52,7 @@ nav .active{
         width: 100%;
         padding: 0.5rem 1rem;
         border-right: none;
-        border-bottom: 1.5px solid #6b6b6b;
+        border-bottom: 1.5px solid var(--border-color);
     }
     .nav-item{
         margin: 0;

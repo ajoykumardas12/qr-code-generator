@@ -17,12 +17,12 @@
     padding: 0.2rem;
     font-size: 1rem;
     margin: 0.3rem 0 1rem;
-    border: 0.15rem solid #BDCDD6;
+    border: 0.15rem solid var(--bluish-light-gray);
     border-radius: 0.2rem;
 }
 .input:focus{
-    background-color: #BDCDD6;
-    border: 0.15rem solid #404c53;
+    background-color: var(--bluish-light-gray);
+    border: 0.15rem solid var(--bluish-dark-gray);
     outline: none;
 }
 
@@ -32,10 +32,13 @@
     font-size: 1rem;
     width: 5rem;
     height: 2rem;
-    background: #93BFCF;
+    background: var(--sky-blue);
     border: none;
     border-radius: 0.2rem;
     cursor: pointer;
+}
+.submit-button:hover{
+    background: var(--steel-blue);
 }
 
 @media screen and (max-width: 450px){

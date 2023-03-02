@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #c2c2c2;
+    background: var(--gray);
 }
 .qr-code{
     display: block;
@@ -14,8 +14,8 @@
 }
 .button{
     margin: 0.5rem 1rem 1.5rem;
-    color: black;
-    background: #93BFCF;
+    color: var(--text-color);
+    background: var(--sky-blue);
     border: none;
     border-radius: 0.2rem;
     padding: 0.2rem 0.4rem;
@@ -25,9 +25,8 @@
     font-size: 1rem;
 }
 .button:hover{
-    background: #BDCDD6;
+    background: var(--steel-blue);
 }
-
 
 .options{
     display: flex;
@@ -57,8 +56,8 @@
 .width-value-decrement{
     display: flex;
     align-items: center;
-    background: #DDDDDD;
-    border: 1px solid #aaaaaa;
+    background: var(--whitish-gray);
+    border: 1px solid var(--steel-blue);
     border-radius: 0.2rem;
     cursor: pointer;
 }
@@ -98,7 +97,6 @@
     border: none;
     cursor: pointer;
 }
-
 .color-box input::-webkit-color-swatch {
     border: none;
 }
