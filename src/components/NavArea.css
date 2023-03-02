@@ -18,6 +18,9 @@ nav{
     text-decoration: none;
     color: #000;
 }
+nav .active{
+    background: #e9e8e8;
+}
 .nav-item:hover{
     background: #cacaca;
 }
