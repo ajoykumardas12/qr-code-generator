@@ -21,6 +21,8 @@
     padding: 0.2rem 0.4rem;
     cursor: pointer;
     text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
 }
 .button:hover{
     background: #BDCDD6;

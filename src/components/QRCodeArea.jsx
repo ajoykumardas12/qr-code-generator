@@ -12,7 +12,7 @@ function QRCodeArea(props) {
             light: '#ffffff'
         }
     });
-    const [fileName, setFileName] = useState("qr-code");
+    const [fileName, setFileName] = useState("QR-code");
 
     function incrementWidth(){
         if(imageOptions.width < 2000){
@@ -119,7 +119,7 @@ function QRCodeArea(props) {
                     <input type="text" name="image-file-name-input" className="input" value={fileName} onChange={handleFileName}/>
                 </div>
             </div>
-            <div className="button apply-changes" onClick={applyChanges}>Apply Changes</div>
+            <button className="button apply-changes" onClick={applyChanges}>Apply Changes</button>
             <ToastContainer/>
         </div>
     );

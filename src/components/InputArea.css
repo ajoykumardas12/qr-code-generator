@@ -27,6 +27,7 @@
 }
 
 .submit-button{
+    align-self: center;
     font-family: 'Outfit', sans-serif;
     font-size: 1rem;
     width: 5rem;
