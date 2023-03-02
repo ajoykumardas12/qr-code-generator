@@ -57,7 +57,6 @@ function App() {
         <QRCodeArea 
           imgUrl={qRCodeUrl}
           optionsChange={handleOptionsChange}
-          onGenerate={handleGenerate}
         />
       </main>
     </div>

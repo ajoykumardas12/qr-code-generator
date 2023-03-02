@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./QRCodeArea.css";
 
 function QRCodeArea(props) {
@@ -11,10 +13,6 @@ function QRCodeArea(props) {
         }
     });
     const [fileName, setFileName] = useState("qr-code");
-
-    useEffect(() => {
-        props.optionsChange(imageOptions);
-    })
 
     function incrementWidth(){
         if(imageOptions.width < 2000){
@@ -58,7 +56,16 @@ function QRCodeArea(props) {
     }
 
     function applyChanges(){
-        props.onGenerate();
+        props.optionsChange(imageOptions);
+        toast.success("Applied changes! Try generating now!.", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            theme: "light",
+        });
     }
 
     return (
@@ -113,6 +120,7 @@ function QRCodeArea(props) {
                 </div>
             </div>
             <div className="button apply-changes" onClick={applyChanges}>Apply Changes</div>
+            <ToastContainer/>
         </div>
     );
 }
