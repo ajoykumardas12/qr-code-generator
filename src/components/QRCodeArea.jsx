@@ -73,6 +73,7 @@ function QRCodeArea(props) {
             <img src={props.imgUrl} alt="sample qr code" className="qr-code"/>
             <a href={props.imgUrl} download={fileName} className="button save-button">Save</a>
             <div className="options">
+                <div className="options-title">Customize QR Code:</div>
                 <div className="image-width">
                     <label htmlFor="image-width-input">Width:</label>
                     <div className="width-value-control">

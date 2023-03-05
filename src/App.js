@@ -5,13 +5,13 @@ import Header from "./components/Header";
 import NavArea from "./components/NavArea";
 
 import QRCode from "qrcode";
-import sampleQR from "./images/sample-qr.png";
+import initialQRUrl from "./InitialQR";
 
 import "./App.css";
 
 function App() {
   const [input, setInput] = useState("");
-  const [qRCodeUrl, setQRCodeUrl] = useState(sampleQR);
+  const [qRCodeUrl, setQRCodeUrl] = useState(initialQRUrl);
   const [options, setOptions] = useState({
     width: 600,
     margin: 3,
@@ -36,6 +36,7 @@ function App() {
   function handleGenerate(){
     QRCode.toDataURL(input, options)
     .then(url => {
+      console.log(url);
       changeQRUrl(url)
     })
     .catch(err => {
