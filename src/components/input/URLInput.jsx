@@ -4,7 +4,7 @@ function URLInput(props) {
     const [urlInput, setURLInput] = useState("");
 
     useEffect(() => {
-        props.onInputChange("https://" + urlInput);
+        props.onInputChange(urlInput);
     })
 
     function handleURLInputChange(event){
