@@ -14,6 +14,7 @@
 .input{
     box-sizing: border-box;
     height: 1.9rem;
+    max-width: 27rem;
     padding: 0.2rem;
     font-size: 1rem;
     margin: 0.3rem 0 1rem;
@@ -32,6 +33,18 @@
 .contact-input .input{
     margin: 0.2rem 0 0.7rem;
 }
+.encryption-type{
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 0.8rem;
+}
+.encryption-type label{
+    padding-left: 0.2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
 
 .submit-button{
     align-self: center;
@@ -49,7 +62,7 @@
     background: var(--steel-blue);
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 750px){
     .input-area{
         padding: 1rem 1.5rem;
     }

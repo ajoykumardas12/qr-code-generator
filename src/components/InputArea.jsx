@@ -5,6 +5,7 @@ import EmailInput from "./input/EmailInput";
 import SMSInput from "./input/SMSInput";
 import PhoneInput from "./input/PhoneInput";
 import ContactInput from "./input/ContactInput";
+import WifiInput from "./input/WifiInput";
 import { Routes,
     Route
 } from "react-router-dom";
@@ -22,6 +23,7 @@ function InputArea(props) {
                     <Route path="/sms" element={<SMSInput onInputChange={props.onInputChange} onGenerate={props.onGenerate}/>} />
                     <Route path="/phone" element={<PhoneInput onInputChange={props.onInputChange} onGenerate={props.onGenerate}/>} />
                     <Route path="/contact" element={<ContactInput onInputChange={props.onInputChange} onGenerate={props.onGenerate}/>} />
+                    <Route path="/wifi" element={<WifiInput onInputChange={props.onInputChange} onGenerate={props.onGenerate}/>} />
                 </Routes>
             </div>
         </>

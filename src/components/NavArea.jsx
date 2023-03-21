@@ -31,11 +31,10 @@ function NavArea() {
                 <ion-icon name="person-circle-outline"></ion-icon>
                 <p className="nav-item-name">Contact</p>
             </Link>
-            <div className="nav-item wifi">
+            <Link className={`nav-item wifi ${path.pathname === "/wifi" ? "active" : ""}`} to="/wifi">
                 <ion-icon name="wifi-outline"></ion-icon>
                 <p className="nav-item-name">Wifi</p>
-                <p className="tooltip-text">coming soon!</p>
-            </div>
+            </Link>
         </nav>
     );
 }

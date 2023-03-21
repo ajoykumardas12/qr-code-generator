@@ -4,7 +4,8 @@ main{
     border-bottom: 1.5px solid var(--border-color);
 }
 
-@media screen and (max-width: 450px){
+/* 782 */
+@media screen and (max-width: 750px){
     main{
         display: flex;
         flex-direction: column;

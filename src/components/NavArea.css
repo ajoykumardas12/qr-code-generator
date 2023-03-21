@@ -25,25 +25,17 @@ nav .active{
     background: var(--light-gray);
 }
 
-.tooltip-text{
-    visibility: hidden;
-    width: 120px;
-    background-color: var(--light-gray);
-    text-align: center;
-    font-size: 1rem;
-    border-radius: 6px;
-    padding: 5px 0;
-  
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
+@media screen and (max-width: 850px){
+    nav{
+        width: 90%;
+        font-size: 1.3rem;
+    }
+    .nav-item{
+        margin: 1rem 1.5rem;
+    }
 }
 
-.wifi:hover .tooltip-text{
-    visibility: visible;
-}
-
-@media screen and (max-width: 450px){
+@media screen and (max-width: 750px){
     nav{
         flex-direction: row;
         align-items: center;
@@ -52,6 +44,7 @@ nav .active{
         padding: 0.5rem 1rem;
         border-right: none;
         border-bottom: 1.5px solid var(--border-color);
+        font-size: 1.8rem;
     }
     .nav-item{
         margin: 0;
@@ -59,7 +52,9 @@ nav .active{
     .nav-item-name{
         display: none;
     }
-    .tooltip-text{
-        left: -120px;
+}
+@media screen and (max-width: 550px){
+    nav{
+        font-size: 1.7rem;
     }
 }

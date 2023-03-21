@@ -21,7 +21,7 @@ function PhoneInput(props) {
 
     return (
         <form action=""  onSubmit={handlePhoneInputSumbit}>
-            <label htmlFor="input-for-qr" className="label">Phone Input </label>
+            <label htmlFor="input-for-qr" className="label">Phone Number </label>
             <input type="text" name="input-for-qr" className="input" id="input-for-qr" value={phoneInput} onChange={handlePhoneInputChange} autoComplete="off" />
             <button type="submit" className="submit-button">Submit</button>
         </form>

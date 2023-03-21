@@ -108,7 +108,18 @@
     border: none;
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 850px){
+    .qr-code{
+        max-width: 13rem;
+        margin-right: 3.5rem;
+        margin-left: 3.5rem;
+    }
+    .options{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 750px){
     .qr-code-area{
         max-width: 100%;
         margin-left: 0;

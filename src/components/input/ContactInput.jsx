@@ -100,7 +100,7 @@ function ContactInput(props) {
 
     return (
         <form action=""  onSubmit={handleContactInputSumbit} className="contact-input">
-            <label htmlFor="input-for-name" className="label">Name </label>
+            <label htmlFor="input-for-name" className="label">Contact Name </label>
             <input type="text" name="input-for-name" className="input" id="input-for-name" value={contactInput.name} onChange={handleContactInputChange} autoComplete="off" />
             <label htmlFor="input-for-mobile" className="label"> Mobile </label>
             <input type="text" name="input-for-mobile" className="input" id="input-for-mobile" value={contactInput.mobile} onChange={handleContactInputChange} autoComplete="off" />
