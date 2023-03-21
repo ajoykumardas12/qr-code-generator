@@ -36,7 +36,6 @@ function App() {
   function handleGenerate(){
     QRCode.toDataURL(input, options)
     .then(url => {
-      console.log(url);
       changeQRUrl(url)
     })
     .catch(err => {
