@@ -38,8 +38,7 @@ nav .active{
     position: absolute;
     z-index: 1;
 }
-.phone:hover .tooltip-text,
-.contact:hover .tooltip-text,
+
 .wifi:hover .tooltip-text{
     visibility: visible;
 }
