@@ -1,131 +1,131 @@
-.qr-code-area{
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: var(--gray);
+.qr-code-area {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray);
 }
-.qr-code{
-    display: block;
-    width: 15rem;
-    border-radius: 0.5rem;
-    margin: 2rem 4rem 0.5rem;
+.qr-code {
+  display: block;
+  width: 15rem;
+  border-radius: 0.5rem;
+  margin: 2rem 4rem 0.5rem;
 }
-.button{
-    margin: 0.5rem 1rem 1.5rem;
-    color: var(--text-color);
-    background: var(--sky-blue);
-    border: none;
-    border-radius: 0.2rem;
-    padding: 0.2rem 0.4rem;
-    cursor: pointer;
-    text-decoration: none;
-    font-family: 'Outfit', sans-serif;
-    font-size: 1rem;
+.button {
+  margin: 0.5rem 1rem 1.5rem;
+  color: var(--text-color);
+  background: var(--sky-blue);
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
 }
-.button:hover{
-    background: var(--steel-blue);
+.button:hover {
+  background: var(--steel-blue);
 }
 
-.options{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    font-size: 1.1rem;
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.1rem;
 }
-.options-title{
-    font-size: 1.2rem;
-    font-weight: 600;
+.options-title {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
-.options label{
-    margin-right: 0.5rem;
+.options label {
+  margin-right: 0.5rem;
 }
-.image-width{
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
+.image-width {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
 }
-.width-value-control{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.2rem;
-    font-size: 1.2rem;
+.width-value-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 1.2rem;
 }
-.width-value{
-    padding: 0 0.2rem;
+.width-value {
+  padding: 0 0.2rem;
 }
 .width-value-increment,
-.width-value-decrement{
-    display: flex;
-    align-items: center;
-    background: var(--whitish-gray);
-    border: 1px solid var(--steel-blue);
-    border-radius: 0.2rem;
-    cursor: pointer;
+.width-value-decrement {
+  display: flex;
+  align-items: center;
+  background: var(--whitish-gray);
+  border: 1px solid var(--steel-blue);
+  border-radius: 0.2rem;
+  cursor: pointer;
 }
 
-.image-color{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
+.image-color {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
 }
-.colors{
-    margin-top: 0.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+.colors {
+  margin-top: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 .image-color-background,
-.image-color-pixels{
-    display: flex;
-    gap: 0.5rem;
+.image-color-pixels {
+  display: flex;
+  gap: 0.5rem;
 }
 
-.color-box{
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 0.3rem;
-    cursor: pointer;
+.color-box {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
 }
-.color-box input{
-    max-width: 100%;
-    max-height: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+.color-box input {
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 .color-box input::-webkit-color-swatch {
-    border: none;
+  border: none;
 }
 .color-box input::-moz-color-swatch {
-    border: none;
+  border: none;
 }
 
-@media screen and (max-width: 850px){
-    .qr-code{
-        max-width: 13rem;
-        margin-right: 3.5rem;
-        margin-left: 3.5rem;
-    }
-    .options{
-        font-size: 0.9rem;
-    }
+@media screen and (max-width: 850px) {
+  .qr-code {
+    max-width: 13rem;
+    margin-right: 3.5rem;
+    margin-left: 3.5rem;
+  }
+  .options {
+    font-size: 0.9rem;
+  }
 }
 
-@media screen and (max-width: 750px){
-    .qr-code-area{
-        max-width: 100%;
-        margin-left: 0;
-    }
-    .qr-code{
-        max-width: 12rem;
-        margin: 2rem 0 1rem;
-    }
+@media screen and (max-width: 750px) {
+  .qr-code-area {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .qr-code {
+    max-width: 12rem;
+    margin: 2rem 0 1rem;
+  }
 }

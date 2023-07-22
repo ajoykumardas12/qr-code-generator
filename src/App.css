@@ -1,18 +1,18 @@
-main{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    border-bottom: 1.5px solid var(--border-color);
+main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border-bottom: 1.5px solid var(--border-color);
 }
 
 /* 782 */
-@media screen and (max-width: 750px){
-    main{
-        display: flex;
-        flex-direction: column;
-        border-bottom: none;
-    }
+@media screen and (max-width: 750px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+  }
 }
 
-ion-icon{
-    pointer-events: none;
+ion-icon {
+  pointer-events: none;
 }

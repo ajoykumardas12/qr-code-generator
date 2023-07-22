@@ -1,6 +1,6 @@
-header{
-    text-align: left;
-    padding: 1rem;
+header {
+  text-align: left;
+  padding: 1rem;
 
-    border-bottom: 1.5px solid var(--border-color);
+  border-bottom: 1.5px solid var(--border-color);
 }

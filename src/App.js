@@ -15,32 +15,32 @@ function App() {
   const [options, setOptions] = useState({
     width: 600,
     margin: 3,
-    color:{
-      dark: '#000000',
-      light: '#ffffff'
-    }
+    color: {
+      dark: "#000000",
+      light: "#ffffff",
+    },
   });
 
-  function handleInput(value){
+  function handleInput(value) {
     setInput(value);
   }
 
-  function changeQRUrl(newUrl){
+  function changeQRUrl(newUrl) {
     setQRCodeUrl(newUrl);
   }
 
-  function handleOptionsChange(newOptions){
+  function handleOptionsChange(newOptions) {
     setOptions(newOptions);
   }
 
-  function handleGenerate(){
+  function handleGenerate() {
     QRCode.toDataURL(input, options)
-    .then(url => {
-      changeQRUrl(url)
-    })
-    .catch(err => {
-      console.error(err)
-    })
+      .then((url) => {
+        changeQRUrl(url);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
     // setInput("");
   }
 
@@ -49,15 +49,12 @@ function App() {
       <Header></Header>
       <main className="main">
         <NavArea />
-        <InputArea 
+        <InputArea
           inputValue={input}
           onInputChange={handleInput}
           onGenerate={handleGenerate}
         />
-        <QRCodeArea 
-          imgUrl={qRCodeUrl}
-          optionsChange={handleOptionsChange}
-        />
+        <QRCodeArea imgUrl={qRCodeUrl} optionsChange={handleOptionsChange} />
       </main>
     </div>
   );
