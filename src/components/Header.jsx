@@ -4,7 +4,9 @@ import "./Header.css";
 function Header() {
   return (
     <header>
-      <h1>QR Code Generator</h1>
+      <h1>
+        <a href="/">QR Code Generator</a>
+      </h1>
     </header>
   );
 }

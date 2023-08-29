@@ -1,6 +1,6 @@
 header {
   text-align: left;
   padding: 1rem;
-
+  color: var(--darkest);
   border-bottom: 1.5px solid var(--border-color);
 }

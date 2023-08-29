@@ -14,6 +14,11 @@
   --bluish-dark-gray: #404c53;
   --sky-blue: #93bfcf;
   --steel-blue: #bdcdd6;
+  --brand: #6c9daf;
+  --darkest: #01161e;
+  --dark: #0f3e50;
+  --mid: #93afb8;
+  --light: #cfe3e9;
 }
 body {
   font-family: "Outfit", sans-serif;
@@ -21,4 +26,12 @@ body {
 
   color: var(--text-color);
   background: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+a:active,
+:visited {
+  color: var(--darkest);
 }
