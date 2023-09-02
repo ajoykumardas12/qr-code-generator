@@ -1,6 +1,7 @@
 header {
   text-align: left;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
+  background: #f2f2f7;
+  font-size: 0.8rem;
   color: var(--darkest);
-  border-bottom: 1.5px solid var(--border-color);
 }

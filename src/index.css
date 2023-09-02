@@ -19,6 +19,7 @@
   --dark: #0f3e50;
   --mid: #93afb8;
   --light: #cfe3e9;
+  --lightest: #f2f2f7;
 }
 body {
   font-family: "Outfit", sans-serif;
@@ -34,4 +35,11 @@ a {
 a:active,
 :visited {
   color: var(--darkest);
+}
+
+.horizontal-divider {
+  width: 100%;
+  height: 0.5px;
+  background: var(--border-color);
+  opacity: 30%;
 }
