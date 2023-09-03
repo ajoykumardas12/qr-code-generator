@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./NavArea.css";
+import { Contact, Globe, Mail, Phone, Send, Type, Wifi } from "lucide-react";
 
 function NavArea() {
   const path = useLocation();
@@ -11,7 +12,7 @@ function NavArea() {
         className={`nav-item text ${path.pathname === "/" ? "active" : ""}`}
         to="/"
       >
-        <ion-icon name="document-text-outline"></ion-icon>
+        <Type />
         <p className="nav-item-name">Text</p>
       </Link>
       <Link
@@ -20,7 +21,7 @@ function NavArea() {
         }`}
         to="/website"
       >
-        <ion-icon name="globe-outline"></ion-icon>
+        <Globe />
         <p className="nav-item-name">Website</p>
       </Link>
       <Link
@@ -29,14 +30,14 @@ function NavArea() {
         }`}
         to="/email"
       >
-        <ion-icon name="mail-outline"></ion-icon>
+        <Mail />
         <p className="nav-item-name">Email</p>
       </Link>
       <Link
         className={`nav-item sms ${path.pathname === "/sms" ? "active" : ""}`}
         to="/sms"
       >
-        <ion-icon name="send-outline"></ion-icon>
+        <Send />
         <p className="nav-item-name">SMS</p>
       </Link>
       <Link
@@ -45,7 +46,7 @@ function NavArea() {
         }`}
         to="/phone"
       >
-        <ion-icon name="call-outline"></ion-icon>
+        <Phone />
         <p className="nav-item-name">Phone</p>
       </Link>
       <Link
@@ -54,14 +55,14 @@ function NavArea() {
         }`}
         to="/contact"
       >
-        <ion-icon name="person-circle-outline"></ion-icon>
+        <Contact />
         <p className="nav-item-name">Contact</p>
       </Link>
       <Link
         className={`nav-item wifi ${path.pathname === "/wifi" ? "active" : ""}`}
         to="/wifi"
       >
-        <ion-icon name="wifi-outline"></ion-icon>
+        <Wifi />
         <p className="nav-item-name">Wifi</p>
       </Link>
     </nav>
