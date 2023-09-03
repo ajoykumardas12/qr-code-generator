@@ -19,6 +19,7 @@ nav .active,
 .nav-item:hover {
   background: var(--dark);
   color: var(--lightest);
+  box-shadow: 1px 1px 4px 0 var(--dark);
 }
 
 .nav-item:hover {
@@ -34,24 +35,18 @@ nav .active,
   }
 } */
 
-/* @media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) {
   nav {
+    padding: 0.5rem;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    border-right: none;
-    border-bottom: 1.5px solid var(--border-color);
-    font-size: 1.8rem;
+    justify-content: space-around;
+    gap: 0.5rem;
   }
-  .nav-item {
-    margin: 0;
+  .nav-item:hover {
+    scale: 1;
   }
-  .nav-item-name {
-    display: none;
-  }
-} */
+}
 /* @media screen and (max-width: 550px) {
   nav {
     font-size: 1.7rem;
