@@ -1,24 +1,39 @@
 .input-area {
   flex-grow: 1;
-  padding-top: 3rem;
   display: flex;
   justify-content: center;
   overflow-y: auto;
 }
+.input-area .input-layout {
+  width: 100%;
+  padding: 2.5rem 4rem 3rem;
+}
+.input-layout .input-heading {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+.input-layout .input-description {
+  padding-left: 0.2rem;
+  font-size: 1rem;
+  color: var(--bluish-gray);
+}
+
 .input-area form {
+  padding: 1.5rem 1rem 0;
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
 }
 
 .input-area label {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
 .input {
   box-sizing: border-box;
   height: 1.9rem;
-  max-width: 27rem;
   padding: 0.2rem;
   font-size: 1rem;
   margin: 0.3rem 0 1rem;
@@ -57,13 +72,14 @@
   width: 5rem;
   height: 2rem;
   margin: 0.7rem 0 1rem;
-  background: var(--sky-blue);
+  background: var(--dark);
+  color: var(--lightest);
   border: none;
   border-radius: 0.2rem;
   cursor: pointer;
 }
 .submit-button:hover {
-  background: var(--steel-blue);
+  background: var(--bluish-gray);
 }
 
 @media screen and (max-width: 750px) {

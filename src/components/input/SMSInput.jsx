@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import InputLayout from "./InputLayout";
 
 function SMSInput(props) {
   const [smsInput, setSMSInput] = useState({
@@ -35,36 +36,37 @@ function SMSInput(props) {
   }
 
   return (
-    <form action="" onSubmit={handleSMSInputSumbit}>
-      <label htmlFor="input-for-mailto" className="label">
-        SMS To{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-mailto"
-        className="input"
-        id="input-for-mailto"
-        value={smsInput.to}
-        onChange={handleSMSInputChange}
-        autoComplete="off"
-      />
-      <label htmlFor="input-for-body" className="label">
-        {" "}
-        Body{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-body"
-        className="input"
-        id="input-for-body"
-        value={smsInput.body}
-        onChange={handleSMSInputChange}
-        autoComplete="off"
-      />
-      <button type="submit" className="submit-button">
-        Submit
-      </button>
-    </form>
+    <InputLayout heading="SMS" description="Enter your sms">
+      <form action="" onSubmit={handleSMSInputSumbit}>
+        <label htmlFor="input-for-mailto" className="label">
+          SMS To
+        </label>
+        <input
+          type="text"
+          name="input-for-mailto"
+          className="input"
+          id="input-for-mailto"
+          value={smsInput.to}
+          onChange={handleSMSInputChange}
+          autoComplete="off"
+        />
+        <label htmlFor="input-for-body" className="label">
+          Body
+        </label>
+        <input
+          type="text"
+          name="input-for-body"
+          className="input"
+          id="input-for-body"
+          value={smsInput.body}
+          onChange={handleSMSInputChange}
+          autoComplete="off"
+        />
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
+      </form>
+    </InputLayout>
   );
 }
 
