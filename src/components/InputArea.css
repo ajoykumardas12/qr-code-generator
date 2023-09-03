@@ -1,5 +1,9 @@
 .input-area {
+  flex-grow: 1;
   padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
 }
 .input-area form {
   display: flex;
@@ -64,6 +68,7 @@
 
 @media screen and (max-width: 750px) {
   .input-area {
+    overflow-y: visible;
     padding: 1rem 1.5rem;
   }
 }
