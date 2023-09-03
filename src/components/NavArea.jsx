@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./NavArea.css";
-import { Contact, Globe, Mail, Phone, Send, Type, Wifi } from "lucide-react";
+import { AtSign, Contact, Globe, Phone, Send, Type, Wifi } from "lucide-react";
 
 function NavArea() {
   const path = useLocation();
@@ -12,8 +12,7 @@ function NavArea() {
         className={`nav-item text ${path.pathname === "/" ? "active" : ""}`}
         to="/"
       >
-        <Type />
-        <p className="nav-item-name">Text</p>
+        <Type size={22} />
       </Link>
       <Link
         className={`nav-item website ${
@@ -21,8 +20,7 @@ function NavArea() {
         }`}
         to="/website"
       >
-        <Globe />
-        <p className="nav-item-name">Website</p>
+        <Globe size={22} />
       </Link>
       <Link
         className={`nav-item email ${
@@ -30,15 +28,13 @@ function NavArea() {
         }`}
         to="/email"
       >
-        <Mail />
-        <p className="nav-item-name">Email</p>
+        <AtSign size={22} />
       </Link>
       <Link
         className={`nav-item sms ${path.pathname === "/sms" ? "active" : ""}`}
         to="/sms"
       >
-        <Send />
-        <p className="nav-item-name">SMS</p>
+        <Send size={22} />
       </Link>
       <Link
         className={`nav-item phone ${
@@ -46,8 +42,7 @@ function NavArea() {
         }`}
         to="/phone"
       >
-        <Phone />
-        <p className="nav-item-name">Phone</p>
+        <Phone size={22} />
       </Link>
       <Link
         className={`nav-item contact ${
@@ -55,15 +50,13 @@ function NavArea() {
         }`}
         to="/contact"
       >
-        <Contact />
-        <p className="nav-item-name">Contact</p>
+        <Contact size={22} />
       </Link>
       <Link
         className={`nav-item wifi ${path.pathname === "/wifi" ? "active" : ""}`}
         to="/wifi"
       >
-        <Wifi />
-        <p className="nav-item-name">Wifi</p>
+        <Wifi size={22} />
       </Link>
     </nav>
   );

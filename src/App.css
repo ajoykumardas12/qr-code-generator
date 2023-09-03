@@ -1,6 +1,13 @@
+.app {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  flex-grow: 1;
+  display: flex;
   border-bottom: 1.5px solid var(--border-color);
 }
 
