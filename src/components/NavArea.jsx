@@ -13,6 +13,7 @@ function NavArea() {
         to="/"
       >
         <Type size={22} />
+        <p className="nav-item-text">Text</p>
       </Link>
       <Link
         className={`nav-item website ${
@@ -21,6 +22,7 @@ function NavArea() {
         to="/website"
       >
         <Globe size={22} />
+        <p className="nav-item-text">Website</p>
       </Link>
       <Link
         className={`nav-item email ${
@@ -29,12 +31,14 @@ function NavArea() {
         to="/email"
       >
         <AtSign size={22} />
+        <p className="nav-item-text">Email</p>
       </Link>
       <Link
         className={`nav-item sms ${path.pathname === "/sms" ? "active" : ""}`}
         to="/sms"
       >
         <Send size={22} />
+        <p className="nav-item-text">SMS</p>
       </Link>
       <Link
         className={`nav-item phone ${
@@ -43,6 +47,7 @@ function NavArea() {
         to="/phone"
       >
         <Phone size={22} />
+        <p className="nav-item-text">Phone</p>
       </Link>
       <Link
         className={`nav-item contact ${
@@ -51,12 +56,14 @@ function NavArea() {
         to="/contact"
       >
         <Contact size={22} />
+        <p className="nav-item-text">Contact</p>
       </Link>
       <Link
         className={`nav-item wifi ${path.pathname === "/wifi" ? "active" : ""}`}
         to="/wifi"
       >
         <Wifi size={22} />
+        <p className="nav-item-text">Wifi</p>
       </Link>
     </nav>
   );
