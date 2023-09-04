@@ -43,6 +43,10 @@
   font-size: 1.2rem;
   font-weight: 600;
 }
+.options-subheading {
+  font-size: 1rem;
+  font-weight: 600;
+}
 .options label {
   margin-right: 0.5rem;
 }
@@ -117,7 +121,6 @@
 }
 
 .image-file-name input {
-  box-sizing: border-box;
   border: none;
   border-bottom: 1px solid var(--steel-blue);
   padding: 0.2rem;
@@ -133,11 +136,18 @@
   margin: 1rem 0;
 }
 
+@media screen and (max-width: 980px) {
+  .qr-code-area {
+    padding: 2.5rem;
+  }
+}
+
 @media screen and (max-width: 850px) {
+  .qr-code-area {
+    padding: 2rem;
+  }
   .qr-code {
     max-width: 13rem;
-    margin-right: 3.5rem;
-    margin-left: 3.5rem;
   }
   .options {
     font-size: 0.9rem;
@@ -145,12 +155,8 @@
 }
 
 @media screen and (max-width: 750px) {
-  .qr-code-area {
-    max-width: 100%;
-    margin-left: 0;
-  }
   .qr-code {
     max-width: 12rem;
-    margin: 2rem 0 1rem;
+    margin: 1.5rem 0 1rem;
   }
 }

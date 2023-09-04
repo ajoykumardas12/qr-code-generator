@@ -77,9 +77,9 @@ function QRCodeArea(props) {
         <p>Save as image</p>
       </a>
       <div className="options">
-        <div className="options-title">Customize QR Code:</div>
+        <h3 className="options-title">Customize QR Code:</h3>
         <div className="image-width">
-          <p>Width:</p>
+          <h4 className="options-subheading">Width:</h4>
           <div className="width-value-control">
             <button className="width-value-decrement" onClick={decrementWidth}>
               <MinusCircle fill="#bdcdd6" color="#0f3e50" />
@@ -93,7 +93,7 @@ function QRCodeArea(props) {
           </div>
         </div>
         <div className="image-color">
-          <span>Colors:</span>
+          <h4 className="options-subheading">Colors:</h4>
           <div className="colors">
             <div className="image-color-background">
               <div
@@ -128,7 +128,9 @@ function QRCodeArea(props) {
           </div>
         </div>
         <div className="image-file-name">
-          <label htmlFor="image-file-name-input">File Name:</label>
+          <label htmlFor="image-file-name-input" className="options-subheading">
+            File Name:
+          </label>
           <input
             type="text"
             name="image-file-name-input"
