@@ -1,31 +1,36 @@
 .qr-code-area {
-  margin-left: auto;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--gray);
+  background: var(--light);
 }
 .qr-code {
-  display: block;
-  width: 15rem;
+  width: 13rem;
   border-radius: 0.5rem;
-  margin: 2rem 4rem 0.5rem;
+  margin: 1rem 2rem 0.5rem;
 }
-.button {
-  margin: 0.5rem 1rem 1.5rem;
-  color: var(--text-color);
-  background: var(--sky-blue);
+.qr-code-area .button {
+  color: var(--lightest);
+  background: var(--darkest);
   border: none;
   border-radius: 0.2rem;
-  padding: 0.2rem 0.4rem;
+  padding: 0.3rem 0.5rem;
   cursor: pointer;
   text-decoration: none;
   font-family: "Outfit", sans-serif;
   font-size: 1rem;
 }
-.button:hover {
-  background: var(--steel-blue);
+.qr-code-area .button:hover {
+  background: var(--bluish-gray);
+}
+
+.qr-code-area .save-button {
+  margin: 1rem 0 2.5rem;
+  padding: 0.4rem 0.7rem;
+  display: flex;
+  gap: 0.4rem;
 }
 
 .options {
@@ -47,6 +52,7 @@
   gap: 0.2rem;
 }
 .width-value-control {
+  margin-left: 0.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -55,15 +61,16 @@
 }
 .width-value {
   padding: 0 0.2rem;
+  font-size: 1rem;
 }
 .width-value-increment,
 .width-value-decrement {
   display: flex;
   align-items: center;
-  background: var(--whitish-gray);
-  border: 1px solid var(--steel-blue);
-  border-radius: 0.2rem;
+  border: none;
+  background: transparent;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 .image-color {
@@ -83,6 +90,7 @@
 .image-color-pixels {
   display: flex;
   gap: 0.5rem;
+  font-size: 1rem;
 }
 
 .color-box {
@@ -106,6 +114,23 @@
 }
 .color-box input::-moz-color-swatch {
   border: none;
+}
+
+.image-file-name input {
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid var(--steel-blue);
+  padding: 0.2rem;
+  font-size: 0.9rem;
+  background: transparent;
+}
+.image-file-name input:focus {
+  border-bottom: 1px solid var(--bluish-dark-gray);
+  outline: none;
+}
+
+.apply-changes {
+  margin: 1rem 0;
 }
 
 @media screen and (max-width: 850px) {
