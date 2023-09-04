@@ -31,7 +31,8 @@ nav .active,
   opacity: 0;
 }
 
-.nav-item:hover .nav-item-text {
+.nav-item:hover .nav-item-text,
+.nav-item:focus .nav-item-text {
   opacity: 100%;
 }
 

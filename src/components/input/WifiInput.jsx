@@ -21,6 +21,7 @@ function WifiInput(props) {
   });
 
   function handleWifiInputChange(event) {
+    const authTypeRadioInputRegex = /^input-for-auth-type/;
     if (event.target.name === "input-for-ssid") {
       setWifiInput((prevValue) => {
         let newWifiInput = { ...prevValue };
@@ -33,7 +34,7 @@ function WifiInput(props) {
         newWifiInput.password = event.target.value;
         return newWifiInput;
       });
-    } else if (event.target.name === "input-for-auth-type") {
+    } else if (authTypeRadioInputRegex.test(event.target.name)) {
       setWifiInput((prevValue) => {
         let newWifiInput = { ...prevValue };
         newWifiInput.encryption = event.target.value;
@@ -89,7 +90,7 @@ function WifiInput(props) {
             <div className="encryption-type-radio">
               <input
                 type="radio"
-                name="input-for-auth-type"
+                name="input-for-auth-type1"
                 id="none"
                 value="none"
                 checked={wifiInput.encryption === "none"}
@@ -100,7 +101,7 @@ function WifiInput(props) {
             <div className="encryption-type-radio">
               <input
                 type="radio"
-                name="input-for-auth-type"
+                name="input-for-auth-type2"
                 id="wap"
                 value="WAP"
                 checked={wifiInput.encryption === "WAP"}
@@ -111,7 +112,7 @@ function WifiInput(props) {
             <div className="encryption-type-radio">
               <input
                 type="radio"
-                name="input-for-auth-type"
+                name="input-for-auth-type3"
                 id="wpa"
                 value="WPA"
                 checked={wifiInput.encryption === "WPA"}
@@ -122,7 +123,7 @@ function WifiInput(props) {
             <div className="encryption-type-radio">
               <input
                 type="radio"
-                name="input-for-auth-type"
+                name="input-for-auth-type4"
                 id="wpa2"
                 value="WPA2"
                 checked={wifiInput.encryption === "WPA2"}
