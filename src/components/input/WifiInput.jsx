@@ -53,77 +53,83 @@ function WifiInput(props) {
   return (
     <InputLayout heading="Wifi" description="Enter wifi details">
       <form action="" onSubmit={handleWifiInputSumbit}>
-        <label htmlFor="input-for-ssid" className="label">
-          SSID
-        </label>
-        <input
-          type="text"
-          name="input-for-ssid"
-          className="input"
-          id="input-for-ssid"
-          value={wifiInput.ssid}
-          onChange={handleWifiInputChange}
-          autoComplete="off"
-        />
-        <label htmlFor="input-for-password" className="label">
-          Password
-        </label>
-        <input
-          type="text"
-          name="input-for-password"
-          className="input"
-          id="input-for-password"
-          value={wifiInput.password}
-          onChange={handleWifiInputChange}
-          autoComplete="off"
-        />
-        <label htmlFor="input-for-auth-type" className="label">
-          Encryption Type
-        </label>
-        <div className="encryption-type">
-          <div className="encryption-type-radio">
-            <input
-              type="radio"
-              name="input-for-auth-type"
-              id="none"
-              value="none"
-              checked={wifiInput.encryption === "none"}
-              onChange={handleWifiInputChange}
-            />
-            <label htmlFor="none">None</label>
-          </div>
-          <div className="encryption-type-radio">
-            <input
-              type="radio"
-              name="input-for-auth-type"
-              id="wap"
-              value="WAP"
-              checked={wifiInput.encryption === "WAP"}
-              onChange={handleWifiInputChange}
-            />
-            <label htmlFor="wap">WAP</label>
-          </div>
-          <div className="encryption-type-radio">
-            <input
-              type="radio"
-              name="input-for-auth-type"
-              id="wpa"
-              value="WPA"
-              checked={wifiInput.encryption === "WPA"}
-              onChange={handleWifiInputChange}
-            />
-            <label htmlFor="wpa">WPA</label>
-          </div>
-          <div className="encryption-type-radio">
-            <input
-              type="radio"
-              name="input-for-auth-type"
-              id="wpa2"
-              value="WPA2"
-              checked={wifiInput.encryption === "WPA2"}
-              onChange={handleWifiInputChange}
-            />
-            <label htmlFor="wpa2">WPA2</label>
+        <div className="form-group">
+          <label htmlFor="input-for-ssid" className="label">
+            SSID
+          </label>
+          <input
+            type="text"
+            name="input-for-ssid"
+            className="input"
+            id="input-for-ssid"
+            value={wifiInput.ssid}
+            onChange={handleWifiInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-password" className="label">
+            Password
+          </label>
+          <input
+            type="text"
+            name="input-for-password"
+            className="input"
+            id="input-for-password"
+            value={wifiInput.password}
+            onChange={handleWifiInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-auth-type" className="label">
+            Encryption Type
+          </label>
+          <div className="encryption-type">
+            <div className="encryption-type-radio">
+              <input
+                type="radio"
+                name="input-for-auth-type"
+                id="none"
+                value="none"
+                checked={wifiInput.encryption === "none"}
+                onChange={handleWifiInputChange}
+              />
+              <label htmlFor="none">None</label>
+            </div>
+            <div className="encryption-type-radio">
+              <input
+                type="radio"
+                name="input-for-auth-type"
+                id="wap"
+                value="WAP"
+                checked={wifiInput.encryption === "WAP"}
+                onChange={handleWifiInputChange}
+              />
+              <label htmlFor="wap">WAP</label>
+            </div>
+            <div className="encryption-type-radio">
+              <input
+                type="radio"
+                name="input-for-auth-type"
+                id="wpa"
+                value="WPA"
+                checked={wifiInput.encryption === "WPA"}
+                onChange={handleWifiInputChange}
+              />
+              <label htmlFor="wpa">WPA</label>
+            </div>
+            <div className="encryption-type-radio">
+              <input
+                type="radio"
+                name="input-for-auth-type"
+                id="wpa2"
+                value="WPA2"
+                checked={wifiInput.encryption === "WPA2"}
+                onChange={handleWifiInputChange}
+              />
+              <label htmlFor="wpa2">WPA2</label>
+            </div>
           </div>
         </div>
         <button type="submit" className="submit-button">

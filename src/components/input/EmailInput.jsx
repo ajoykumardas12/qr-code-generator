@@ -52,42 +52,48 @@ function EmailInput(props) {
   return (
     <InputLayout heading="Email" description="Enter email contents">
       <form action="" onSubmit={handleEmailInputSumbit}>
-        <label htmlFor="input-for-mailto" className="label">
-          Email To
-        </label>
-        <input
-          type="text"
-          name="input-for-mailto"
-          className="input"
-          id="input-for-mailto"
-          value={emailInput.to}
-          onChange={handleEmailInputChange}
-          autoComplete="off"
-        />
-        <label htmlFor="input-for-subject" className="label">
-          Subject
-        </label>
-        <input
-          type="text"
-          name="input-for-subject"
-          className="input"
-          id="input-for-subject"
-          value={emailInput.subject}
-          onChange={handleEmailInputChange}
-          autoComplete="off"
-        />
-        <label htmlFor="input-for-body" className="label">
-          Body
-        </label>
-        <input
-          type="text"
-          name="input-for-body"
-          className="input"
-          id="input-for-body"
-          value={emailInput.body}
-          onChange={handleEmailInputChange}
-          autoComplete="off"
-        />
+        <div className="form-group">
+          <label htmlFor="input-for-mailto" className="label">
+            Email To
+          </label>
+          <input
+            type="text"
+            name="input-for-mailto"
+            className="input"
+            id="input-for-mailto"
+            value={emailInput.to}
+            onChange={handleEmailInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-subject" className="label">
+            Subject
+          </label>
+          <input
+            type="text"
+            name="input-for-subject"
+            className="input"
+            id="input-for-subject"
+            value={emailInput.subject}
+            onChange={handleEmailInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-body" className="label">
+            Body
+          </label>
+          <input
+            type="text"
+            name="input-for-body"
+            className="input"
+            id="input-for-body"
+            value={emailInput.body}
+            onChange={handleEmailInputChange}
+            autoComplete="off"
+          />
+        </div>
         <button type="submit" className="submit-button">
           Submit
         </button>

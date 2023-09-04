@@ -23,18 +23,20 @@ function TextInput(props) {
   return (
     <InputLayout heading="Text" description="Enter your text">
       <form action="" onSubmit={handleTextInputSumbit}>
-        <label htmlFor="input-for-qr" className="label">
-          Text Input
-        </label>
-        <input
-          type="text"
-          name="input-for-qr"
-          className="input"
-          id="input-for-qr"
-          value={textInput}
-          onChange={handleTextInputChange}
-          autoComplete="off"
-        />
+        <div className="form-group">
+          <label htmlFor="input-for-qr" className="label">
+            Text Input
+          </label>
+          <input
+            type="text"
+            name="input-for-qr"
+            className="input"
+            id="input-for-qr"
+            value={textInput}
+            onChange={handleTextInputChange}
+            autoComplete="off"
+          />
+        </div>
         <button type="submit" className="submit-button">
           Submit
         </button>
