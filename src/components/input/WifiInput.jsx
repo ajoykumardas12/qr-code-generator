@@ -83,9 +83,7 @@ function WifiInput(props) {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="input-for-auth-type" className="label">
-            Encryption Type
-          </label>
+          <p className="label">Encryption Type</p>
           <div className="encryption-type">
             <div className="encryption-type-radio">
               <input

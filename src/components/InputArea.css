@@ -30,12 +30,14 @@
   flex-direction: column;
 }
 
-.input-layout label {
+.input-layout label,
+.input-layout .label {
   color: var(--bluish-gray);
   font-size: 1.05rem;
   font-weight: 600;
 }
 .input-layout .input {
+  max-width: 35rem;
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid var(--steel-blue);
@@ -79,5 +81,14 @@
   .input-area {
     overflow-y: visible;
     padding: 1rem 1.5rem;
+  }
+  .input-layout .input-heading {
+    font-size: 2.5rem;
+  }
+  .input-layout form {
+    padding: 1.5rem 1rem 1rem;
+  }
+  .input-area .input-layout {
+    padding: 0 0rem 0rem;
   }
 }
