@@ -47,6 +47,7 @@ function App() {
   return (
     <div className="app">
       <Header></Header>
+      <div className="horizontal-divider"></div>
       <main className="main">
         <NavArea />
         <InputArea

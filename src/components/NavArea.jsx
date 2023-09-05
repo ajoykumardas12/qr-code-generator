@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./NavArea.css";
+import { AtSign, Contact, Globe, Phone, Send, Type, Wifi } from "lucide-react";
 
 function NavArea() {
   const path = useLocation();
@@ -11,8 +12,8 @@ function NavArea() {
         className={`nav-item text ${path.pathname === "/" ? "active" : ""}`}
         to="/"
       >
-        <ion-icon name="document-text-outline"></ion-icon>
-        <p className="nav-item-name">Text</p>
+        <Type size={22} />
+        <p className="nav-item-text">Text</p>
       </Link>
       <Link
         className={`nav-item website ${
@@ -20,8 +21,8 @@ function NavArea() {
         }`}
         to="/website"
       >
-        <ion-icon name="globe-outline"></ion-icon>
-        <p className="nav-item-name">Website</p>
+        <Globe size={22} />
+        <p className="nav-item-text">Website</p>
       </Link>
       <Link
         className={`nav-item email ${
@@ -29,15 +30,15 @@ function NavArea() {
         }`}
         to="/email"
       >
-        <ion-icon name="mail-outline"></ion-icon>
-        <p className="nav-item-name">Email</p>
+        <AtSign size={22} />
+        <p className="nav-item-text">Email</p>
       </Link>
       <Link
         className={`nav-item sms ${path.pathname === "/sms" ? "active" : ""}`}
         to="/sms"
       >
-        <ion-icon name="send-outline"></ion-icon>
-        <p className="nav-item-name">SMS</p>
+        <Send size={22} />
+        <p className="nav-item-text">SMS</p>
       </Link>
       <Link
         className={`nav-item phone ${
@@ -45,8 +46,8 @@ function NavArea() {
         }`}
         to="/phone"
       >
-        <ion-icon name="call-outline"></ion-icon>
-        <p className="nav-item-name">Phone</p>
+        <Phone size={22} />
+        <p className="nav-item-text">Phone</p>
       </Link>
       <Link
         className={`nav-item contact ${
@@ -54,15 +55,15 @@ function NavArea() {
         }`}
         to="/contact"
       >
-        <ion-icon name="person-circle-outline"></ion-icon>
-        <p className="nav-item-name">Contact</p>
+        <Contact size={22} />
+        <p className="nav-item-text">Contact</p>
       </Link>
       <Link
         className={`nav-item wifi ${path.pathname === "/wifi" ? "active" : ""}`}
         to="/wifi"
       >
-        <ion-icon name="wifi-outline"></ion-icon>
-        <p className="nav-item-name">Wifi</p>
+        <Wifi size={22} />
+        <p className="nav-item-text">Wifi</p>
       </Link>
     </nav>
   );

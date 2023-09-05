@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./QRCodeArea.css";
+import { Download, MinusCircle, PlusCircle } from "lucide-react";
 
 function QRCodeArea(props) {
   const [imageOptions, setImageOptions] = useState({
@@ -12,7 +13,7 @@ function QRCodeArea(props) {
       light: "#ffffff",
     },
   });
-  const [fileName, setFileName] = useState("QR-code");
+  const [fileName, setFileName] = useState("qr-code.png");
 
   function incrementWidth() {
     if (imageOptions.width < 2000) {
@@ -72,38 +73,27 @@ function QRCodeArea(props) {
     <div className="qr-code-area">
       <img src={props.imgUrl} alt="sample qr code" className="qr-code" />
       <a href={props.imgUrl} download={fileName} className="button save-button">
-        Save
+        <Download size={20} />
+        <p>Save as image</p>
       </a>
       <div className="options">
-        <div className="options-title">Customize QR Code:</div>
+        <h3 className="options-title">Customize QR Code:</h3>
         <div className="image-width">
-          <label htmlFor="image-width-input">Width:</label>
+          <h4 className="options-subheading">Width:</h4>
           <div className="width-value-control">
-            <div className="width-value-decrement" onClick={decrementWidth}>
-              <ion-icon name="remove-outline"></ion-icon>
-            </div>
+            <button className="width-value-decrement" onClick={decrementWidth}>
+              <MinusCircle fill="#bdcdd6" color="#0f3e50" />
+            </button>
             <div className="width-value" name="image-width-input">
               {imageOptions.width}px
             </div>
-            <div className="width-value-increment" onClick={incrementWidth}>
-              <ion-icon name="add-outline"></ion-icon>
-            </div>
+            <button className="width-value-increment" onClick={incrementWidth}>
+              <PlusCircle fill="#bdcdd6" color="#0f3e50" />
+            </button>
           </div>
         </div>
-        {/* Later */}
-        {/* <div className="image-margin">
-                    <label htmlFor="image-margin-input">Outer Margin:</label>
-                    <select name="margin-input" id="margin-input">
-                        <option value="0">No Margin</option>
-                        <option value="1">Smaller</option>
-                        <option value="2">Small</option>
-                        <option value="4">Default</option>
-                        <option value="5">Large</option>
-                        <option value="6">Larger</option>
-                    </select>
-                </div> */}
         <div className="image-color">
-          <span>Color:</span>
+          <h4 className="options-subheading">Colors:</h4>
           <div className="colors">
             <div className="image-color-background">
               <div
@@ -113,11 +103,12 @@ function QRCodeArea(props) {
                 <input
                   type="color"
                   name="light-color"
+                  id="light-color"
                   value={imageOptions.color.light}
                   onChange={handleColorChange}
                 />
               </div>
-              <span>Background</span>
+              <label htmlFor="light-color">Background</label>
             </div>
             <div className="image-color-pixels">
               <div
@@ -127,20 +118,24 @@ function QRCodeArea(props) {
                 <input
                   type="color"
                   name="dark-color"
+                  id="dark-color"
                   value={imageOptions.color.dark}
                   onChange={handleColorChange}
                 />
               </div>
-              <span>Pixels</span>
+              <label htmlFor="dark-color">Pixels</label>
             </div>
           </div>
         </div>
         <div className="image-file-name">
-          <label htmlFor="image-file-name-input">File Name:</label>
+          <label htmlFor="image-file-name-input" className="options-subheading">
+            File Name:
+          </label>
           <input
             type="text"
             name="image-file-name-input"
-            className="input"
+            id="image-file-name-input"
+            className="file-name-input"
             value={fileName}
             onChange={handleFileName}
           />

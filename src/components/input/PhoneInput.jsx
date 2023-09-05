@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import InputLayout from "./InputLayout";
 
 function PhoneInput(props) {
   const [phoneInput, setPhoneInput] = useState("");
@@ -20,23 +21,27 @@ function PhoneInput(props) {
   }
 
   return (
-    <form action="" onSubmit={handlePhoneInputSumbit}>
-      <label htmlFor="input-for-qr" className="label">
-        Phone Number{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-qr"
-        className="input"
-        id="input-for-qr"
-        value={phoneInput}
-        onChange={handlePhoneInputChange}
-        autoComplete="off"
-      />
-      <button type="submit" className="submit-button">
-        Submit
-      </button>
-    </form>
+    <InputLayout heading="Phone" description="Enter the number to be called">
+      <form action="" onSubmit={handlePhoneInputSumbit}>
+        <div className="form-group">
+          <label htmlFor="input-for-qr" className="label">
+            Phone Number
+          </label>
+          <input
+            type="text"
+            name="input-for-qr"
+            className="input"
+            id="input-for-qr"
+            value={phoneInput}
+            onChange={handlePhoneInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
+      </form>
+    </InputLayout>
   );
 }
 

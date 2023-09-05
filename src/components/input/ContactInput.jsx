@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import InputLayout from "./InputLayout";
 
 function ContactInput(props) {
   const [contactInput, setContactInput] = useState({
@@ -42,7 +43,7 @@ function ContactInput(props) {
         contactInput.postalCode +
         ";" +
         contactInput.country +
-        "\r\nEND:VCARD",
+        "\r\nEND:VCARD"
     );
   });
 
@@ -137,157 +138,171 @@ function ContactInput(props) {
   }
 
   return (
-    <form
-      action=""
-      onSubmit={handleContactInputSumbit}
-      className="contact-input"
-    >
-      <label htmlFor="input-for-name" className="label">
-        Contact Name{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-name"
-        className="input"
-        id="input-for-name"
-        value={contactInput.name}
-        onChange={handleContactInputChange}
-        autoComplete="off"
-      />
-      <label htmlFor="input-for-mobile" className="label">
-        {" "}
-        Mobile{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-mobile"
-        className="input"
-        id="input-for-mobile"
-        value={contactInput.mobile}
-        onChange={handleContactInputChange}
-        autoComplete="off"
-      />
-      <label htmlFor="input-for-phone" className="label">
-        {" "}
-        Phone{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-phone"
-        className="input"
-        id="input-for-phone"
-        value={contactInput.phone}
-        onChange={handleContactInputChange}
-        autoComplete="off"
-      />
-      <label htmlFor="input-for-email" className="label">
-        {" "}
-        Email{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-email"
-        className="input"
-        id="input-for-email"
-        value={contactInput.email}
-        onChange={handleContactInputChange}
-        autoComplete="off"
-      />
-      <label htmlFor="input-for-organization" className="label">
-        {" "}
-        Organization{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-organization"
-        className="input"
-        id="input-for-organization"
-        value={contactInput.organization}
-        onChange={handleContactInputChange}
-        autoComplete="off"
-      />
-      <label htmlFor="input-for-website" className="label">
-        {" "}
-        Website{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-website"
-        className="input"
-        id="input-for-website"
-        value={contactInput.website}
-        onChange={handleContactInputChange}
-        autoComplete="off"
-      />
-      <label htmlFor="input-for-street" className="label">
-        {" "}
-        Street{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-street"
-        className="input"
-        id="input-for-street"
-        value={contactInput.street}
-        onChange={handleContactInputChange}
-        autoComplete="off"
-      />
-      <label htmlFor="input-for-city" className="label">
-        {" "}
-        City{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-city"
-        className="input"
-        id="input-for-city"
-        value={contactInput.city}
-        onChange={handleContactInputChange}
-        autoComplete="off"
-      />
-      <label htmlFor="input-for-district" className="label">
-        {" "}
-        District{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-district"
-        className="input"
-        id="input-for-district"
-        value={contactInput.district}
-        onChange={handleContactInputChange}
-        autoComplete="off"
-      />
-      <label htmlFor="input-for-postal-code" className="label">
-        {" "}
-        Postal Code{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-postal-code"
-        className="input"
-        id="input-for-postal-code"
-        value={contactInput.postalCode}
-        onChange={handleContactInputChange}
-        autoComplete="off"
-      />
-      <label htmlFor="input-for-country" className="label">
-        {" "}
-        Country{" "}
-      </label>
-      <input
-        type="text"
-        name="input-for-country"
-        className="input"
-        id="input-for-country"
-        value={contactInput.country}
-        onChange={handleContactInputChange}
-        autoComplete="off"
-      />
-      <button type="submit" className="submit-button">
-        Submit
-      </button>
-    </form>
+    <InputLayout heading="Contact" description="Enter contact details">
+      <form
+        action=""
+        onSubmit={handleContactInputSumbit}
+        className="contact-input"
+      >
+        <div className="form-group">
+          <label htmlFor="input-for-name" className="label">
+            Contact Name
+          </label>
+          <input
+            type="text"
+            name="input-for-name"
+            className="input"
+            id="input-for-name"
+            value={contactInput.name}
+            onChange={handleContactInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-mobile" className="label">
+            Mobile
+          </label>
+          <input
+            type="text"
+            name="input-for-mobile"
+            className="input"
+            id="input-for-mobile"
+            value={contactInput.mobile}
+            onChange={handleContactInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-phone" className="label">
+            Phone
+          </label>
+          <input
+            type="text"
+            name="input-for-phone"
+            className="input"
+            id="input-for-phone"
+            value={contactInput.phone}
+            onChange={handleContactInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-email" className="label">
+            Email
+          </label>
+          <input
+            type="text"
+            name="input-for-email"
+            className="input"
+            id="input-for-email"
+            value={contactInput.email}
+            onChange={handleContactInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-organization" className="label">
+            Organization
+          </label>
+          <input
+            type="text"
+            name="input-for-organization"
+            className="input"
+            id="input-for-organization"
+            value={contactInput.organization}
+            onChange={handleContactInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-website" className="label">
+            Website
+          </label>
+          <input
+            type="text"
+            name="input-for-website"
+            className="input"
+            id="input-for-website"
+            value={contactInput.website}
+            onChange={handleContactInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-street" className="label">
+            Street
+          </label>
+          <input
+            type="text"
+            name="input-for-street"
+            className="input"
+            id="input-for-street"
+            value={contactInput.street}
+            onChange={handleContactInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-city" className="label">
+            City
+          </label>
+          <input
+            type="text"
+            name="input-for-city"
+            className="input"
+            id="input-for-city"
+            value={contactInput.city}
+            onChange={handleContactInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-district" className="label">
+            District
+          </label>
+          <input
+            type="text"
+            name="input-for-district"
+            className="input"
+            id="input-for-district"
+            value={contactInput.district}
+            onChange={handleContactInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-postal-code" className="label">
+            Postal Code
+          </label>
+          <input
+            type="text"
+            name="input-for-postal-code"
+            className="input"
+            id="input-for-postal-code"
+            value={contactInput.postalCode}
+            onChange={handleContactInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="input-for-country" className="label">
+            Country
+          </label>
+          <input
+            type="text"
+            name="input-for-country"
+            className="input"
+            id="input-for-country"
+            value={contactInput.country}
+            onChange={handleContactInputChange}
+            autoComplete="off"
+          />
+        </div>
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
+      </form>
+    </InputLayout>
   );
 }
 

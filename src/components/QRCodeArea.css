@@ -1,31 +1,36 @@
 .qr-code-area {
-  margin-left: auto;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--gray);
+  background: var(--light);
 }
 .qr-code {
-  display: block;
-  width: 15rem;
+  width: 13rem;
   border-radius: 0.5rem;
-  margin: 2rem 4rem 0.5rem;
+  margin: 1rem 2rem 0.5rem;
 }
-.button {
-  margin: 0.5rem 1rem 1.5rem;
-  color: var(--text-color);
-  background: var(--sky-blue);
+.qr-code-area .button {
+  color: var(--lightest);
+  background: var(--darkest);
   border: none;
   border-radius: 0.2rem;
-  padding: 0.2rem 0.4rem;
+  padding: 0.3rem 0.5rem;
   cursor: pointer;
   text-decoration: none;
   font-family: "Outfit", sans-serif;
   font-size: 1rem;
 }
-.button:hover {
-  background: var(--steel-blue);
+.qr-code-area .button:hover {
+  background: var(--bluish-gray);
+}
+
+.qr-code-area .save-button {
+  margin: 1rem 0 2.5rem;
+  padding: 0.4rem 0.7rem;
+  display: flex;
+  gap: 0.4rem;
 }
 
 .options {
@@ -38,15 +43,20 @@
   font-size: 1.2rem;
   font-weight: 600;
 }
+.options-subheading {
+  font-size: 1rem;
+  font-weight: 600;
+}
 .options label {
   margin-right: 0.5rem;
 }
 .image-width {
   display: flex;
   align-items: center;
-  gap: 0.2rem;
+  gap: 0.6rem;
 }
 .width-value-control {
+  margin-left: 0.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -55,15 +65,16 @@
 }
 .width-value {
   padding: 0 0.2rem;
+  font-size: 1rem;
 }
 .width-value-increment,
 .width-value-decrement {
   display: flex;
   align-items: center;
-  background: var(--whitish-gray);
-  border: 1px solid var(--steel-blue);
-  border-radius: 0.2rem;
+  border: none;
+  background: transparent;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 .image-color {
@@ -83,6 +94,7 @@
 .image-color-pixels {
   display: flex;
   gap: 0.5rem;
+  font-size: 1rem;
 }
 
 .color-box {
@@ -108,11 +120,34 @@
   border: none;
 }
 
+.image-file-name input {
+  border: none;
+  border-bottom: 1px solid var(--steel-blue);
+  padding: 0.2rem;
+  font-size: 0.9rem;
+  background: transparent;
+}
+.image-file-name input:focus {
+  border-bottom: 1px solid var(--bluish-dark-gray);
+  outline: none;
+}
+
+.apply-changes {
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 980px) {
+  .qr-code-area {
+    padding: 2.5rem;
+  }
+}
+
 @media screen and (max-width: 850px) {
+  .qr-code-area {
+    padding: 2rem;
+  }
   .qr-code {
     max-width: 13rem;
-    margin-right: 3.5rem;
-    margin-left: 3.5rem;
   }
   .options {
     font-size: 0.9rem;
@@ -120,12 +155,8 @@
 }
 
 @media screen and (max-width: 750px) {
-  .qr-code-area {
-    max-width: 100%;
-    margin-left: 0;
-  }
   .qr-code {
     max-width: 12rem;
-    margin: 2rem 0 1rem;
+    margin: 1.5rem 0 1rem;
   }
 }
