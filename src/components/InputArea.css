@@ -20,6 +20,7 @@
 }
 
 .input-layout form {
+  max-width: 40rem;
   padding: 1.5rem 1rem 3rem;
   display: flex;
   flex-direction: column;
@@ -37,7 +38,6 @@
   font-weight: 600;
 }
 .input-layout .input {
-  max-width: 35rem;
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid var(--steel-blue);
