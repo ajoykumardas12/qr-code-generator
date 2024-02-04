@@ -5,13 +5,12 @@ import Header from "./components/Header";
 import NavArea from "./components/NavArea";
 
 import QRCode from "qrcode";
-import initialQRUrl from "./InitialQR";
 
 import "./App.css";
 
 function App() {
   const [input, setInput] = useState("");
-  const [qRCodeUrl, setQRCodeUrl] = useState(initialQRUrl);
+  const [qRCodeUrl, setQRCodeUrl] = useState("/portfolio-qr.png");
   const [options, setOptions] = useState({
     width: 600,
     margin: 3,
@@ -41,7 +40,6 @@ function App() {
       .catch((err) => {
         console.error(err);
       });
-    // setInput("");
   }
 
   return (
